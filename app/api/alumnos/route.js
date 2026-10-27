@@ -9,7 +9,7 @@ export async function GET() {
         const pool = await getConnection();
 
         const resultado = await pool.request().query(
-            "SELECT id, numCuenta, nombre, apellidoPaterno, apellidoMaterno FROM dbo.tbl_alumno ORDER BY numCuenta"
+            "SELECT id, numCuenta, nombre, apellidoPaterno, apellidoMaterno, FROM dbo.tbl_alumno ORDER BY numCuenta"
         );
 
         return NextResponse.json({
